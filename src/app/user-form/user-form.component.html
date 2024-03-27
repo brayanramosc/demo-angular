@@ -1,0 +1,11 @@
+<h1>FORMULARIO DE USUARIO</h1>
+<input type="text" name="" id="" (input)="handleChangeInput($event)">
+<span>{{inputMessage}}</span>
+<!-- [disabled]="isButtonDisabled": property binding -->
+<!-- (click)="handleClickSave()": event binding -->
+<button 
+    [disabled]="isButtonDisabled"
+    (click)="handleClickSave()"
+>
+    Guardar data
+</button>
