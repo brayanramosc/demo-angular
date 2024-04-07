@@ -1,0 +1,18 @@
+<button mat-raised-button color="primary" (click)="handleClickRestore()" >
+    Restaurar Lista
+</button>
+
+<div class="container">
+    <mat-nav-list>
+        @for (pokemon of pokemons; track $index) {
+            <mat-list-item (click)="handleClickPokemon(pokemon)">
+                <div class="pokemon">
+                    <img class="pokemon__pokeball" src="assets/pokebola.png" alt="pokeball">
+                    <span>{{pokemon.nombre}}</span>
+                </div>
+            </mat-list-item>
+        }
+    </mat-nav-list>
+
+    <app-pokemon [pokemon]="selectedPokemon" (deletePokemon)="deletePokemon($event)" />
+</div>
